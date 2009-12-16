@@ -1,0 +1,30 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:AdornerTest1="clr-namespace:AdornerTest1"
+	x:Class="AdornerTest1.MainWindow"
+	x:Name="Window"
+	Title="Popup with shaded background sample"
+	Width="640" Height="480" mc:Ignorable="d">
+
+	<Window.Resources>
+		<DataTemplate x:Key="ItemTemplate">
+			<StackPanel>
+				<TextBlock Text="{Binding Name}" Background="Black" Foreground="White"/>
+				<TextBlock Text="{Binding Phone}"/>
+				<TextBlock Text="{Binding Note}" Margin="0 0 0 8"/>
+			</StackPanel>
+		</DataTemplate>
+	</Window.Resources>
+
+	<Grid x:Name="LayoutRoot" DataContext="{Binding Source={StaticResource SampleDataSource}}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition MinWidth="10" Width="Auto"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Custom:DataGrid x:Name="Grid" ItemsSource="{Binding Collection}"  AutoGenerateColumns="True" SelectionChanged="Grid_SelectionChanged" />
+		<GridSplitter HorizontalAlignment="Stretch" Grid.Column="1"/>
+		<ListBox x:Name="List" Grid.Column="2" ItemTemplate="{DynamicResource ItemTemplate}" ItemsSource="{Binding Collection}" d:LayoutOverrides="GridBox"/>
+	</Grid>
+</Window>
