@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Numbers</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    function isInt(value) {
+        var parsed = parseInt(value);
+        if (isNaN(parsed)) return false;
+        return value == parsed; 
+    }
+
+    
+    module("numbers");
+        
+    test("1 as string", function() {
+        ok(isInt("1"));
+    });
+    test("5 as number", function() {
+        ok(isInt(5));
+    });
+    
+    module("floats");
+    
+    test("1.1  as string", function() {
+        ok(!isInt("1.1"));
+    });
+    test("1.1  as number", function() {
+        ok(!isInt(1.1));
+    });    
+    
+    module("strings");
+    
+    test("1a as string", function() {
+        ok(!isInt("1a"));
+    });
+    test("a1 as string", function() {
+        ok(!isInt("a1"));
+    });
+    test("empty string", function() {
+        ok(!isInt(""));
+    });
+    
+    module("bool");
+    
+    test("true", function() {
+        ok(!isInt(true));
+    });
+    test("false", function() {
+        ok(!isInt(false));
+    });
+    
+    module("objects");
+    
+    test("[]", function() {
+        ok(!isInt([]));
+    });
+    test("[1.1]", function() {
+        ok(!isInt([1.1]));
+    });
+    test("{}", function() {
+        ok(!isInt({}));
+    });
+    test("NaN", function() {
+        ok(!isInt(NaN));
+    });
+    test("undefined", function() {
+        ok(!isInt());
+    });
+    
+});
+</script>
+
+</head>
+<body>
+<h1 id="qunit-header">QUnit example</h1>
+ <h2 id="qunit-banner"></h2>
+ <div id="qunit-testrunner-toolbar"></div>
+ <h2 id="qunit-userAgent"></h2>
+ <ol id="qunit-tests"></ol>
+ <div id="qunit-fixture">test markup, will be hidden</div>
+</body>
+</html>
