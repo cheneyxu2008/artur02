@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Round to float</title>
+    <script src="JSLitmus.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function round1(number, length) {
+            return Math.round(number * Math.pow(10,length))/Math.pow(10,length);
+        }
+
+        function round2(number, length) {
+            return number.toFixed(length);
+        }
+    </script>
+
+    <script type="text/javascript">
+        JSLitmus.test('round1: pow', function(){
+            round1(1.657831, 2);
+        });
+
+        JSLitmus.test('round2: toFixed', function(){
+            round2(1.657831, 2);
+        });
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
