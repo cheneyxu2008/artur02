@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Performance test</title>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js"></script>
+<script src="JSLitmus.js"></script>
+
+<script>
+    $(function(){
+	    for(var i=0; i<1000; i++) {
+	        $('#content').append($('<div>', {'id':i}));
+	    }
+    });
+
+    JSLitmus.test('find', function() {
+        $('body').find('#5');
+    });
+    JSLitmus.test('filter', function() {
+        $('body').filter('#5');
+    });
+</script>
+
+</head>
+<body>
+<div id="content"></div>
+
+</body>
+</html>
