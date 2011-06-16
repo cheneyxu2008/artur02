@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery each</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="http://github.com/cowboy/jquery-misc/raw/master/jquery.ba-each2.js"></script>
+    <script src="JSLitmus.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      // Create a whole bunch of elements for iteration.
+      var elems = $('<div/>').append(Array(1000).join('<span/>')).children();
+    </script>
+
+    <script type="text/javascript">
+        JSLitmus.test("each2 plugin", function() {
+            elems.each2(function(i, jq) {
+                jq; // Use at will!
+                jq; // No performance penalty.
+                jq; // No performance penalty.
+            });
+        });
+
+        JSLitmus.test("jQuery core each", function() {
+            elems.each(function(i, elem) {
+                var jq = $(this); // This is the best we can do here.
+                jq; // No performance penalty.
+                jq; // No performance penalty.
+                jq; // No performance penalty.
+            });
+
+        });
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>
