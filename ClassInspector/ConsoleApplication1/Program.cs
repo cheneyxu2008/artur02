@@ -69,7 +69,14 @@ namespace ConsoleApplication1
 
                         foreach (var baseType in type.BaseClasses)
                         {
+                            
                             props.AddRange(Inspector.GetProperties(baseType.ResolvedType as INamedTypeDefinition));
+
+
+                            //foreach (var prop in baseType.ResolvedType.Properties)
+                            //{
+                            //    Console.WriteLine(prop.Name + " ===> " + prop.Getter.Type + " " + prop.Getter.Type.TypeCode);
+                            //}
                         }
 
                         return props;
