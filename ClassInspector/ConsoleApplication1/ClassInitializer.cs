@@ -7,36 +7,36 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace ConsoleApplication1
+namespace ClassInspectorConsole
 {
     using ClassInspector;
     using Microsoft.Cci;
     using System;
     
     
-    #line 1 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+    #line 1 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "10.0.0.0")]
-    public partial class TextTemplate1 : TextTemplate1Base
+    public partial class ClassInitializer : ClassInitializerBase
     {
         public virtual string TransformText()
         {
             this.Write("var ");
             
-            #line 5 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+            #line 5 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.ClassName.ToLower()));
             
             #line default
             #line hidden
             this.Write(" = new ");
             
-            #line 5 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+            #line 5 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.ClassName));
             
             #line default
             #line hidden
             this.Write("() {\r\n");
             
-            #line 6 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+            #line 6 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
 
 	PushIndent("    ");
     foreach(var prop in Props)
@@ -52,7 +52,7 @@ namespace ConsoleApplication1
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 15 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+        #line 15 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
 
 public string ClassName = "Unknown";
 public System.Collections.Generic.IEnumerable<IPropertyDefinition> Props = new System.Collections.Generic.List<IPropertyDefinition>();
@@ -61,7 +61,7 @@ public System.Collections.Generic.IEnumerable<IPropertyDefinition> Props = new S
         #line default
         #line hidden
         
-        #line 20 "C:\Users\Artur_Herczeg\Documents\Visual Studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\TextTemplate1.tt"
+        #line 20 "D:\Source\Art\ClassInspector\ConsoleApplication1\ClassInitializer.tt"
 
 private string ProcessDate(IPropertyDefinition prop)
 {
@@ -80,7 +80,7 @@ private string ProcessDate(IPropertyDefinition prop)
     /// Base class for this transformation
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "10.0.0.0")]
-    public class TextTemplate1Base
+    public class ClassInitializerBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
