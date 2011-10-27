@@ -1,0 +1,25 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="ClassInspector" #>
+<#@ import namespace="Microsoft.Cci" #>
+var <#= this.ClassName.ToLower() #> = new <#= this.ClassName #>() {
+<#
+	PushIndent("    ");
+    foreach(var prop in Props)
+    {
+        WriteLine("{0}= {1},", Inspector.GetPropertyName(prop), null);
+    }
+	PopIndent();
+#>
+};
+<#+
+public string ClassName = "Unknown";
+public System.Collections.Generic.IEnumerable<IPropertyDefinition> Props = new System.Collections.Generic.List<IPropertyDefinition>();
+#>
+
+<#+
+private string ProcessDate(IPropertyDefinition prop)
+{
+	return String.Empty;
+}
+#>
