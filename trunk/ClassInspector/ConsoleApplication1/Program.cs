@@ -75,7 +75,20 @@ namespace ConsoleApplication1
 
                             //foreach (var prop in baseType.ResolvedType.Properties)
                             //{
-                            //    Console.WriteLine(prop.Name + " ===> " + prop.Getter.Type + " " + prop.Getter.Type.TypeCode);
+                            //    var a = Inspector.GetPropertyReturnType(prop);
+                            //    if (a.ResolvedType.ToString().StartsWith("System.Nullable<"))
+                            //    {
+                            //        var vv = a.ResolvedType.GenericParameters.ToArray();
+                            //        var ee = a.ResolvedType.NestedTypes.ToArray();
+                            //        var rr = a.ResolvedType.BaseClasses.ToArray();
+                            //        foreach (var propertyDefinition in a.ResolvedType.Properties)
+                            //        {
+                            //            Console.WriteLine(">>>>>>{0}", propertyDefinition.Name);
+                            //        }
+                            //    }
+
+
+                            //    Console.WriteLine(prop.Name + " ===> " + Inspector.GetPropertyReturnType(prop) + " " + prop.Getter.Type.TypeCode);
                             //}
                         }
 
