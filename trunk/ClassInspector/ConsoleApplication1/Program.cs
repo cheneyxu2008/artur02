@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ClassInspector;
-using ClassInspectorConsole;
 using Common.Logging;
 using Microsoft.Cci;
 using NConsoler;
+using TypeInspector;
 
-namespace ConsoleApplication1
+namespace ClassInspectorConsole
 {
     internal class Program
     {
@@ -23,30 +21,62 @@ namespace ConsoleApplication1
             Consolery.Run(typeof(Program), args);
         }
 
+        /// <summary>
+        /// Processes the command line arguments and executes the application code
+        /// </summary>
+        /// <param name="typeName">The class name</param>
+        /// <param name="assemblyLocation">The assembly location</param>
         [Action]
         public static void ProcessArguments(
-                [Required] string className,
+                [Required] string typeName,
                 [Required] string assemblyLocation
             )
         {
-            var properties = Parse(className, assemblyLocation);
+            Contract.Requires<ArgumentException>(!string.IsNullOrWhiteSpace(typeName));
+            Contract.Requires<ArgumentException>(!string.IsNullOrWhiteSpace(assemblyLocation));
+            Contract.Requires<ArgumentException>(File.Exists(assemblyLocation));
 
+            var properties = Parse(typeName, assemblyLocation);
+
+            var result = GenerateMarkup(typeName, properties);
+            Clipboard.SetText(result);
+            Console.WriteLine(result);
+
+            Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Generates the class initilaizer markup
+        /// </summary>
+        /// <param name="typeName">The type name</param>
+        /// <param name="properties">The properties</param>
+        /// <returns>The initializer markup</returns>
+        private static string GenerateMarkup(string typeName, IDictionary<IPropertyDefinition, ITypeDefinition> properties)
+        {
+            Log.Info("Generating markup...");
 
             var classInitializer = new ClassInitializer
                                        {
-                                           ClassName = className, 
+                                           ClassName = typeName,
                                            Props = properties
                                        };
             var result = classInitializer.TransformText();
-            Clipboard.SetText(result);
-            Console.WriteLine(result);
+            return result;
         }
 
-        private static IEnumerable<IPropertyDefinition> Parse(string className, string assemblyLocation)
+        /// <summary>
+        /// Pareses the types and returns the properties
+        /// </summary>
+        /// <param name="typeName">The type name we are looking for</param>
+        /// <param name="assemblyLocation">The assembly conatining the inspected types.</param>
+        /// <returns></returns>
+        private static IDictionary<IPropertyDefinition, ITypeDefinition> Parse(string typeName, string assemblyLocation)
         {
-            Contract.Requires<ArgumentException>(!string.IsNullOrWhiteSpace(className));
+            Contract.Requires<ArgumentException>(!string.IsNullOrWhiteSpace(typeName));
             Contract.Requires<ArgumentException>(!string.IsNullOrWhiteSpace(assemblyLocation));
             Contract.Requires<FileNotFoundException>(File.Exists(assemblyLocation));
+
+            Log.Info("Parsing types...");
 
             using (var host = new PeReader.DefaultHost())
             {
@@ -54,48 +84,32 @@ namespace ConsoleApplication1
                     host.LoadUnitFrom(
                         assemblyLocation)
                     as IAssembly;
-                var props = new List<IPropertyDefinition>();
 
-                Log.Info("Inspecting types...");
-                foreach (INamedTypeDefinition type in assembly.GetAllTypes())
+                var props = new Dictionary<IPropertyDefinition, ITypeDefinition>();
+                if(assembly != null)
                 {
-                    Log.DebugFormat("  {0}", type.Name);
-
-
-                    
-                    if (type.ResolvedType.ToString() == className)
+                    Log.Info("Inspecting types...");
+                    foreach (INamedTypeDefinition type in assembly.GetAllTypes())
                     {
-                        props.AddRange(Inspector.GetProperties(type));
+                        Log.TraceFormat("  {0}", type.Name);
 
-                        foreach (var baseType in type.BaseClasses)
+                        if (type.ResolvedType.ToString() == typeName)
                         {
-                            
-                            props.AddRange(Inspector.GetProperties(baseType.ResolvedType as INamedTypeDefinition));
+                            var properties = Inspector.GetPropertiesWithType(type);
+                            props.Merge(properties);
 
+                            foreach (var baseType in type.BaseClasses)
+                            {
+                                var baseProperties =
+                                    Inspector.GetPropertiesWithType(baseType.ResolvedType as INamedTypeDefinition);
+                                props.Merge(baseProperties);
+                            }
 
-                            //foreach (var prop in baseType.ResolvedType.Properties)
-                            //{
-                            //    var a = Inspector.GetPropertyReturnType(prop);
-                            //    if (a.ResolvedType.ToString().StartsWith("System.Nullable<"))
-                            //    {
-                            //        var vv = a.ResolvedType.GenericParameters.ToArray();
-                            //        var ee = a.ResolvedType.NestedTypes.ToArray();
-                            //        var rr = a.ResolvedType.BaseClasses.ToArray();
-                            //        foreach (var propertyDefinition in a.ResolvedType.Properties)
-                            //        {
-                            //            Console.WriteLine(">>>>>>{0}", propertyDefinition.Name);
-                            //        }
-                            //    }
-
-
-                            //    Console.WriteLine(prop.Name + " ===> " + Inspector.GetPropertyReturnType(prop) + " " + prop.Getter.Type.TypeCode);
-                            //}
+                            return props;
                         }
 
-                        return props;
+
                     }
-
-
                 }
 
                 return props;

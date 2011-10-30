@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassInspectorConsole", "ConsoleApplication1\ClassInspectorConsole.csproj", "{5FD8D06C-4A41-4486-93D9-82DAEEE5ACDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassInspector", "ClassInspector\ClassInspector.csproj", "{832B49B5-2B68-493F-9673-DBFA51C3E642}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeInspector", "ClassInspector\TypeInspector.csproj", "{832B49B5-2B68-493F-9673-DBFA51C3E642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

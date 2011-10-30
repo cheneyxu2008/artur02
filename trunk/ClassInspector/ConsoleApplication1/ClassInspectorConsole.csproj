@@ -16,7 +16,7 @@
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -29,7 +29,7 @@
     <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
     <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
     <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
-    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsRunCodeAnalysis>True</CodeContractsRunCodeAnalysis>
     <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
     <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
     <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
@@ -45,7 +45,7 @@
     <CodeContractsExtraRewriteOptions />
     <CodeContractsExtraAnalysisOptions />
     <CodeContractsBaseLineFile />
-    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
     <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
     <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
@@ -63,35 +63,32 @@
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Epam.AgileTool.BackEndAdapter">
-      <HintPath>D:\Source\EPM-SCT\DataMapperRefactoring\code\Epam.AgileTool.BackEndAdapter\bin\Debug\Epam.AgileTool.BackEndAdapter.dll</HintPath>
+    <Reference Include="Microsoft.Cci.ILGenerator">
+      <HintPath>..\References\Microsoft.Cci.ILGenerator.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.ILGenerator, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.ILGenerator.dll</HintPath>
+    <Reference Include="Microsoft.Cci.MetadataHelper">
+      <HintPath>..\References\Microsoft.Cci.MetadataHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.MetadataHelper, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.MetadataHelper.dll</HintPath>
+    <Reference Include="Microsoft.Cci.MetadataModel">
+      <HintPath>..\References\Microsoft.Cci.MetadataModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.MetadataModel, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.MetadataModel.dll</HintPath>
+    <Reference Include="Microsoft.Cci.MutableMetadataModel">
+      <HintPath>..\References\Microsoft.Cci.MutableMetadataModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.MutableMetadataModel, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.MutableMetadataModel.dll</HintPath>
+    <Reference Include="Microsoft.Cci.PdbReader">
+      <HintPath>..\References\Microsoft.Cci.PdbReader.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.PdbReader, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.PdbReader.dll</HintPath>
+    <Reference Include="Microsoft.Cci.PdbWriter">
+      <HintPath>..\References\Microsoft.Cci.PdbWriter.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.PdbWriter, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.PdbWriter.dll</HintPath>
+    <Reference Include="Microsoft.Cci.PeReader">
+      <HintPath>..\References\Microsoft.Cci.PeReader.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.PeReader, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.PeReader.dll</HintPath>
+    <Reference Include="Microsoft.Cci.PeWriter">
+      <HintPath>..\References\Microsoft.Cci.PeWriter.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Cci.PeWriter, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.PeWriter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Cci.SourceModel, Version=2.0.8.17659, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
-      <HintPath>..\..\..\CommonCompilerInfrastructure\Bin\Debug\Microsoft.Cci.SourceModel.dll</HintPath>
+    <Reference Include="Microsoft.Cci.SourceModel">
+      <HintPath>..\References\Microsoft.Cci.SourceModel.dll</HintPath>
     </Reference>
     <Reference Include="NConsoler">
       <HintPath>..\packages\NConsoler.2.0.0.0\lib\NConsoler.dll</HintPath>
@@ -128,9 +125,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassInspector\ClassInspector.csproj">
+    <ProjectReference Include="..\ClassInspector\TypeInspector.csproj">
       <Project>{832B49B5-2B68-493F-9673-DBFA51C3E642}</Project>
-      <Name>ClassInspector</Name>
+      <Name>TypeInspector</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
