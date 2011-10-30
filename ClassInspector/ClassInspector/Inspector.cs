@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using Microsoft.Cci;
 
-namespace ClassInspector
+namespace TypeInspector
 {
     /// <summary>
     /// Helper functions for type inspections
@@ -22,6 +22,22 @@ namespace ClassInspector
             Contract.Requires<ArgumentNullException>(type != null);
 
             return type.Properties;
+        }
+
+        /// <summary>
+        /// Parses the type and returns the property names with their types.
+        /// </summary>
+        /// <param name="type">The inspected type</param>
+        /// <returns>The properties and types</returns>
+        public static Dictionary<IPropertyDefinition, ITypeDefinition> GetPropertiesWithType(INamedTypeDefinition type)
+        {
+            Contract.Requires<ArgumentNullException>(type != null);
+
+            var dict = type.Properties.ToDictionary(
+                propertyDefinition => propertyDefinition, 
+                propertyDefinition => propertyDefinition.Getter.Type.ResolvedType);
+
+            return dict;
         }
 
         /// <summary>
