@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script src="../../Scripts/DataTables-1.8.2/media/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="../../Scripts/DataTables-1.8.2/extras/KeyTable/KeyTable.min.js" type="text/javascript"></script>
+<script src="../../Scripts/DataTables-1.8.2/extras/RowGrouping/jquery.dataTables.rowGrouping.js"
+    type="text/javascript"></script>
+
+<style>
+    .highlighted
+    {
+        background-color: blue;
+    }
+</style>
+
+<h2>Index</h2>
+
+<table id="selfevaltable">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Category</th>
+            <th>2<sup>n</sup> (Level 0)</th>
+            <th>n<sup>2</sup> (Level 1)</th>
+            <th>n (Level 2)</th>
+            <th>log(n) (Level 3)</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Data structures</th>
+            <td>Computer Science</td>
+            <td>Doesn't know the difference between Array and LinkedList</td>
+            <td>Able to explain and use Arrays, LinkedLists, Dictionaries etc in practical programming tasks</td>
+            <td>Knows space and time tradeoffs of the basic data structures, Arrays vs LinkedLists, Able to explain how hashtables can be implemented and can handle collisions, Priority queues and ways to implement them etc.</td>
+            <td>Knowledge of advanced data structures like B-trees, binomial and fibonacci heaps, AVL/Red Black trees, Splay Trees, Skip Lists, tries etc.</td>
+            <td></td>
+        </tr>
+    </tbody>
+    <tfoot></tfoot>
+</table>
+
+<script>
+    $(document).ready(function () {
+        var oTable = $('#selfevaltable')
+            .dataTable({
+                "bSort": false,
+                "bLengthChange": false
+            })
+            .rowGrouping({
+                iGroupingColumnIndex: 1,
+                bHideGroupingColumn: true,
+                bExpandableGrouping: true
+            });
+
+            $('td', oTable.fnGetNodes()).hover(
+                function () {
+                $(this).addClass("highlighted");
+            },
+            function () {
+                $(this).removeClass("highlighted");
+            });
+    });
+</script>
