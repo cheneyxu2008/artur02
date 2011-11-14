@@ -1,0 +1,144 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 11/13/2011 16:27:06
+-- Generated from EDMX file: C:\Source\Art\PublicSite\PublicSite\PublicSite\Models\SelfEvaluation.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    ALTER TABLE [Levels] DROP CONSTRAINT [FK_CriteriaLevel];
+GO
+    ALTER TABLE [SelectionLevel] DROP CONSTRAINT [FK_SelectionLevel_Selection];
+GO
+    ALTER TABLE [SelectionLevel] DROP CONSTRAINT [FK_SelectionLevel_Level];
+GO
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [Criteria];
+GO
+    DROP TABLE [Selections];
+GO
+    DROP TABLE [Levels];
+GO
+    DROP TABLE [SelectionLevel];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'Criteria'
+CREATE TABLE [Criteria] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Comment] nvarchar(4000)  NULL,
+    [Category] nvarchar(4000)  NOT NULL,
+    [Identifier] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'Selections'
+CREATE TABLE [Selections] (
+    [Id] int IDENTITY(1,1) NOT NULL
+);
+GO
+
+-- Creating table 'Levels'
+CREATE TABLE [Levels] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [CriteriaId] int  NOT NULL,
+    [LevelNumber] int  NOT NULL
+);
+GO
+
+-- Creating table 'SelectionLevel'
+CREATE TABLE [SelectionLevel] (
+    [Selections_Id] int  NOT NULL,
+    [Levels_Id] int  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [Id] in table 'Criteria'
+ALTER TABLE [Criteria]
+ADD CONSTRAINT [PK_Criteria]
+    PRIMARY KEY ([Id] );
+GO
+
+-- Creating primary key on [Id] in table 'Selections'
+ALTER TABLE [Selections]
+ADD CONSTRAINT [PK_Selections]
+    PRIMARY KEY ([Id] );
+GO
+
+-- Creating primary key on [Id] in table 'Levels'
+ALTER TABLE [Levels]
+ADD CONSTRAINT [PK_Levels]
+    PRIMARY KEY ([Id] );
+GO
+
+-- Creating primary key on [Selections_Id], [Levels_Id] in table 'SelectionLevel'
+ALTER TABLE [SelectionLevel]
+ADD CONSTRAINT [PK_SelectionLevel]
+    PRIMARY KEY ([Selections_Id], [Levels_Id] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [CriteriaId] in table 'Levels'
+ALTER TABLE [Levels]
+ADD CONSTRAINT [FK_CriteriaLevel]
+    FOREIGN KEY ([CriteriaId])
+    REFERENCES [Criteria]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CriteriaLevel'
+CREATE INDEX [IX_FK_CriteriaLevel]
+ON [Levels]
+    ([CriteriaId]);
+GO
+
+-- Creating foreign key on [Selections_Id] in table 'SelectionLevel'
+ALTER TABLE [SelectionLevel]
+ADD CONSTRAINT [FK_SelectionLevel_Selection]
+    FOREIGN KEY ([Selections_Id])
+    REFERENCES [Selections]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Levels_Id] in table 'SelectionLevel'
+ALTER TABLE [SelectionLevel]
+ADD CONSTRAINT [FK_SelectionLevel_Level]
+    FOREIGN KEY ([Levels_Id])
+    REFERENCES [Levels]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_SelectionLevel_Level'
+CREATE INDEX [IX_FK_SelectionLevel_Level]
+ON [SelectionLevel]
+    ([Levels_Id]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------

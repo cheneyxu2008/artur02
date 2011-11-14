@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using PublicSite.Models;
 
 namespace PublicSite.Controllers
 {
@@ -13,7 +11,15 @@ namespace PublicSite.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            //using (var context = new SelfEvaluationContext())
+            //{
+            //    return View(context.Criterias.ToList());
+            //}
+
+            Logic.InitDatabase();
+
+
+            return View(Logic.GetAllCriteria());
         }
 
     }
