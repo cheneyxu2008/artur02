@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema1"
+    targetNamespace="http://tempuri.org/XMLSchema1.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="criteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="criterion" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="criterion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string" nillable="false" />
+        <xs:element name="identifier" type="xs:string" nillable="false" />
+        <xs:element name="category" type="xs:string" nillable="false" />
+        <xs:element name="level0" type="xs:string" nillable="false" />
+        <xs:element name="level1" type="xs:string" nillable="false" />
+        <xs:element name="level2" type="xs:string" nillable="false" />
+        <xs:element name="level3" type="xs:string" nillable="false" />
+        <xs:element name="comment" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
