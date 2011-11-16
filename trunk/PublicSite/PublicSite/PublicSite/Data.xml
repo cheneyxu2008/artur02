@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:criteria xmlns:ns1="http://tempuri.org/XMLSchema1.xsd">
+	<ns1:criterion>
+		<ns1:name>data structures</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Computer Science</ns1:category>
+		<ns1:level0>Doesn't know the difference between Array and LinkedList</ns1:level0>
+		<ns1:level1>Able to explain and use Arrays, LinkedLists, Dictionaries etc in practical programming tasks</ns1:level1>
+		<ns1:level2>Knows space and time tradeoffs of the basic data structures, Arrays vs LinkedLists, Able to explain how hashtables can be implemented and can handle collisions, Priority queues and ways to implement them etc.</ns1:level2>
+		<ns1:level3>Knowledge of advanced data structures like B-trees, binomial and fibonacci heaps, AVL/Red Black trees, Splay Trees, Skip Lists, tries etc.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>algorithms</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Computer Science</ns1:category>
+		<ns1:level0>Unable to find the average of numbers in an array (It's hard to believe but I've interviewed such candidates)</ns1:level0>
+		<ns1:level1>Basic sorting, searching and data structure traversal and retrieval algorithms</ns1:level1>
+		<ns1:level2>Tree, Graph, simple greedy and divide and conquer algorithms, is able to understand the relevance of the levels of this matrix.</ns1:level2>
+		<ns1:level3>Able to recognize and code dynamic programming solutions, good knowledge of graph algorithms, good knowledge of numerical computation algorithms, able to identify NP problems etc.</ns1:level3>
+		<ns1:comment>Working with someone who has a good topcoder ranking would be an unbelievable piece of luck!</ns1:comment>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>systems programming</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Computer Science</ns1:category>
+		<ns1:level0>Doesn't know what a compiler, linker or interpreter is</ns1:level0>
+		<ns1:level1>Basic understanding of compilers, linker and interpreters. Understands what assembly code is and how things work at the hardware level. Some knowledge of virtual memory and paging.</ns1:level1>
+		<ns1:level2>Understands kernel mode vs. user mode, multi-threading, synchronization primitives and how they're implemented, able to read assembly code. Understands how networks work, understanding of network protocols and socket level programming.</ns1:level2>
+		<ns1:level3>Understands the entire programming stack, hardware (CPU + Memory + Cache + Interrupts + microcode), binary code, assembly, static and dynamic linking, compilation, interpretation, JIT compilation, garbage collection, heap, stack, memory addressing...</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>source code version control</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Software Engineering</ns1:category>
+		<ns1:level0>Folder backups by date</ns1:level0>
+		<ns1:level1>VSS and beginning CVS/SVN user</ns1:level1>
+		<ns1:level2>Proficient in using CVS and SVN features. Knows how to branch and merge, use patches setup repository properties etc.</ns1:level2>
+		<ns1:level3>Knowledge of distributed VCS systems. Has tried out Bzr/Mercurial/Darcs/Git</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>build automation</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Software Engineering</ns1:category>
+		<ns1:level0>Only knows how to build from IDE</ns1:level0>
+		<ns1:level1>Knows how to build the system from the command line</ns1:level1>
+		<ns1:level2>Can setup a script to build the basic system</ns1:level2>
+		<ns1:level3>Can setup a script to build the system and also documentation, installers, generate release notes and tag the code in source control</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>automated testing</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Software Engineering</ns1:category>
+		<ns1:level0>Thinks that all testing is the job of the tester</ns1:level0>
+		<ns1:level1>Has written automated unit tests and comes up with good unit test cases for the code that is being written</ns1:level1>
+		<ns1:level2>Has written code in TDD manner</ns1:level2>
+		<ns1:level3>Understands and is able to setup automated functional, load/performance and UI tests</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>problem decomposition</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Only straight line code with copy paste for reuse</ns1:level0>
+		<ns1:level1>Able to break up problem into multiple functions</ns1:level1>
+		<ns1:level2>Able to come up with reusable functions/objects that solve the overall problem</ns1:level2>
+		<ns1:level3>Use of appropriate data structures and algorithms and comes up with generic/object-oriented code that encapsulate aspects of the problem that are subject to change.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>systems decomposition</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Not able to think above the level of a single file/class</ns1:level0>
+		<ns1:level1>Able to break up problem space and design solution as long as it is within the same platform/technology</ns1:level1>
+		<ns1:level2>Able to design systems that span multiple technologies/platforms.</ns1:level2>
+		<ns1:level3>Able to visualize and design complex systems with multiple product lines and integrations with external systems. Also should be able to design operations support systems like monitoring, reporting, fail overs etc.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>communication</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Cannot express thoughts/ideas to peers. Poor spelling and grammar.</ns1:level0>
+		<ns1:level1>Peers can understand what is being said. Good spelling and grammar.</ns1:level1>
+		<ns1:level2>Is able to effectively communicate with peers</ns1:level2>
+		<ns1:level3>Able to understand and communicate thoughts/design/ideas/specs in a unambiguous manner and adjusts communication as per the context</ns1:level3>
+		<ns1:comment>This is an often under rated but very critical criteria for judging a programmer. With the increase in outsourcing of programming tasks to places where English is not the native tongue this issue has become more prominent. I know of several projects that failed because the programmers could not understand what the intent of the communication was.</ns1:comment>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>code organization within a file</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>no evidence of organization within a file</ns1:level0>
+		<ns1:level1>Methods are grouped logically or by accessibility</ns1:level1>
+		<ns1:level2>Code is grouped into regions and well commented with references to other source files</ns1:level2>
+		<ns1:level3>File has license header, summary, well commented, consistent white space usage. The file should look beautiful.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>code organization across files</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>No thought given to organizing code across files</ns1:level0>
+		<ns1:level1>Related files are grouped into a folder</ns1:level1>
+		<ns1:level2>Each physical file has a unique purpose, for e.g. one class definition, one feature implementation etc.</ns1:level2>
+		<ns1:level3>Code organization at a physical level closely matches design and looking at file names and folder distribution provides insights into design</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>source tree organization</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Everything in one folder</ns1:level0>
+		<ns1:level1>Basic separation of code into logical folders.</ns1:level1>
+		<ns1:level2>No circular dependencies, binaries, libs, docs, builds, third-party code all organized into appropriate folders</ns1:level2>
+		<ns1:level3>Physical layout of source tree matches logical hierarchy and organization. The directory names and organization provide insights into the design of the system.</ns1:level3>
+		<ns1:comment>The difference between this and the previous item is in the scale of organization, source tree organization relates to the entire set of artifacts that define the system.</ns1:comment>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>code readability</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Mono-syllable names</ns1:level0>
+		<ns1:level1>Good names for files, variables classes, methods etc.</ns1:level1>
+		<ns1:level2>No long functions, comments explaining unusual code, bug fixes, code assumptions</ns1:level2>
+		<ns1:level3>Code assumptions are verified using asserts, code flows naturally - no deep nesting of conditionals or methods</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>defensive coding</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Doesn't understand the concept</ns1:level0>
+		<ns1:level1>Checks all arguments and asserts critical assumptions in code</ns1:level1>
+		<ns1:level2>Makes sure to check return values and check for exceptions around code that can fail.</ns1:level2>
+		<ns1:level3>Has his own library to help with defensive coding, writes unit tests that simulate faults</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>error handling</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Only codes the happy case</ns1:level0>
+		<ns1:level1>Basic error handling around code that can throw exceptions/generate errors</ns1:level1>
+		<ns1:level2>Ensures that error/exceptions leave program in good state, resources, connections and memory is all cleaned up properly</ns1:level2>
+		<ns1:level3>Codes to detect possible exception before, maintain consistent exception handling strategy in all layers of code, come up with guidelines on exception handling for entire system.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>IDE</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Mostly uses IDE for text editing</ns1:level0>
+		<ns1:level1>Knows their way around the interface, able to effectively use the IDE using menus.</ns1:level1>
+		<ns1:level2>Knows keyboard shortcuts for most used operations.</ns1:level2>
+		<ns1:level3>Has written custom macros</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>API</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Needs to look up the documentation frequently</ns1:level0>
+		<ns1:level1>Has the most frequently used APIs in memory</ns1:level1>
+		<ns1:level2>Vast and In-depth knowledge of the API</ns1:level2>
+		<ns1:level3>Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API</ns1:level3>
+		<ns1:comment>E.g. of API can be Java library, .net framework or the custom API for the application</ns1:comment>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>frameworks</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Has not used any framework outside of the core platform</ns1:level0>
+		<ns1:level1>Has heard about but not used the popular frameworks available for the platform.</ns1:level1>
+		<ns1:level2>Has used more than one framework in a professional capacity and is well-versed with the idioms of the frameworks.</ns1:level2>
+		<ns1:level3>Author of framework</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>requirements</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Takes the given requirements and codes to spec</ns1:level0>
+		<ns1:level1>Come up with questions regarding missed cases in the spec</ns1:level1>
+		<ns1:level2>Understand complete picture and come up with entire areas that need to be speced</ns1:level2>
+		<ns1:level3>Able to suggest better alternatives and flows to given requirements based on experience</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>scripting</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>No knowledge of scripting tools</ns1:level0>
+		<ns1:level1>Batch files/shell scripts</ns1:level1>
+		<ns1:level2>Perl/Python/Ruby/VBScript/Powershell</ns1:level2>
+		<ns1:level3>Has written and published reusable code</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>database</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Programming</ns1:category>
+		<ns1:level0>Thinks that Excel is a database</ns1:level0>
+		<ns1:level1>Knows basic database concepts, normalization, ACID, transactions and can write simple selects</ns1:level1>
+		<ns1:level2>Able to design good and normalized database schemas keeping in mind the queries that'll have to be run, proficient in use of views, stored procedures, triggers and user defined types. Knows difference between clustered and non-clustered indexes. Proficient in use of ORM tools.</ns1:level2>
+		<ns1:level3>Can do basic database administration, performance optimization, index optimization, write advanced select queries, able to replace cursor usage with relational sql, understands how data is stored internally, understands how indexes are stored internally, understands how databases can be mirrored, replicated etc. Understands how the two phase commit works.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>languages with professional experience</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Experience</ns1:category>
+		<ns1:level0>Imperative or Object Oriented</ns1:level0>
+		<ns1:level1>Imperative, Object-Oriented and declarative (SQL), added bonus if they understand static vs dynamic typing, weak vs strong typing and static inferred types</ns1:level1>
+		<ns1:level2>Functional, added bonus if they understand lazy evaluation, currying, continuations</ns1:level2>
+		<ns1:level3>Concurrent (Erlang, Oz) and Logic (Prolog)</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>platforms with professional experience</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Experience</ns1:category>
+		<ns1:level0>1</ns1:level0>
+		<ns1:level1>2-3</ns1:level1>
+		<ns1:level2>4-5</ns1:level2>
+		<ns1:level3>6+</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>years of professional experience</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Experience</ns1:category>
+		<ns1:level0>1</ns1:level0>
+		<ns1:level1>2-5</ns1:level1>
+		<ns1:level2>6-9</ns1:level2>
+		<ns1:level3>10+</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>domain knowledge</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Experience</ns1:category>
+		<ns1:level0>No knowledge of the domain</ns1:level0>
+		<ns1:level1>Has worked on at least one product in the domain.</ns1:level1>
+		<ns1:level2>Has worked on multiple products in the same domain.</ns1:level2>
+		<ns1:level3>Domain expert. Has designed and implemented several products/solutions in the domain. Well versed with standard terms, protocols used in the domain.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>tool knowledge</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Limited to primary IDE (VS.Net, Eclipse etc.)</ns1:level0>
+		<ns1:level1>Knows about some alternatives to popular and standard tools.</ns1:level1>
+		<ns1:level2>Good knowledge of editors, debuggers, IDEs, open source alternatives etc. etc. For e.g. someone who knows most of the tools from Scott Hanselman's power tools list. Has used ORM tools.</ns1:level2>
+		<ns1:level3>Has actually written tools and scripts, added bonus if they've been published.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>languages exposed to</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Imperative or Object Oriented</ns1:level0>
+		<ns1:level1>Imperative, Object-Oriented and declarative (SQL), added bonus if they understand static vs dynamic typing, weak vs strong typing and static inferred types</ns1:level1>
+		<ns1:level2>Functional, added bonus if they understand lazy evaluation, currying, continuations</ns1:level2>
+		<ns1:level3>Concurrent (Erlang, Oz) and Logic (Prolog)</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>codebase knowledge</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Has never looked at the codebase</ns1:level0>
+		<ns1:level1>Basic knowledge of the code layout and how to build the system</ns1:level1>
+		<ns1:level2>Good working knowledge of code base, has implemented several bug fixes and maybe some small features.</ns1:level2>
+		<ns1:level3>Has implemented multiple big features in the codebase and can easily visualize the changes required for most features or bug fixes.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>knowledge of upcoming technologies</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Has not heard of the upcoming technologies</ns1:level0>
+		<ns1:level1>Has heard of upcoming technologies in the field</ns1:level1>
+		<ns1:level2>Has downloaded the alpha preview/CTP/beta and read some articles/manuals</ns1:level2>
+		<ns1:level3>Has played with the previews and has actually built something with it and as a bonus shared that with everyone else</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>platform internals</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Zero knowledge of platform internals</ns1:level0>
+		<ns1:level1>Has basic knowledge of how the platform works internally</ns1:level1>
+		<ns1:level2>Deep knowledge of platform internals and can visualize how the platform takes the program and converts it into executable code.</ns1:level2>
+		<ns1:level3>Has written tools to enhance or provide information on platform internals. For e.g. disassemblers, decompilers, debuggers etc.</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>books</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Unleashed series, 21 days series, 24 hour series, dummies series...</ns1:level0>
+		<ns1:level1>Code Complete, Don't Make me Think, Mastering Regular Expressions</ns1:level1>
+		<ns1:level2>Design Patterns, Peopleware, Programming Pearls, Algorithm Design Manual, Pragmatic Programmer, Mythical Man month</ns1:level2>
+		<ns1:level3>Structure and Interpretation of Computer Programs, Concepts Techniques, Models of Computer Programming, Art of Computer Programming, Database systems , by C. J Date, Thinking Forth, Little Schemer</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+	<ns1:criterion>
+		<ns1:name>blogs</ns1:name>
+		<ns1:identifier/>
+		<ns1:category>Knowledge</ns1:category>
+		<ns1:level0>Has heard of them but never got the time.</ns1:level0>
+		<ns1:level1>Reads tech/programming/software engineering blogs and listens to podcasts regularly.</ns1:level1>
+		<ns1:level2>Maintains a link blog with some collection of useful articles and tools that he/she has collected</ns1:level2>
+		<ns1:level3>Maintains a blog in which personal insights and thoughts on programming are shared</ns1:level3>
+		<ns1:comment/>
+	</ns1:criterion>
+</ns1:criteria>
