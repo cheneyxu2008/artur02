@@ -58,7 +58,9 @@
     <Property Name="Levels_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="CriteriaLevel">
-    <End Role="Criteria" Type="SelfEvaluation.Store.Criteria" Multiplicity="1" />
+    <End Role="Criteria" Type="SelfEvaluation.Store.Criteria" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Level" Type="SelfEvaluation.Store.Levels" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Criteria">
@@ -141,8 +143,11 @@
           <Property Type="Int32" Name="LevelNumber" Nullable="false" />
         </EntityType>
         <Association Name="CriteriaLevel">
-          <End Type="SelfEvaluation.Criterion" Role="Criteria" Multiplicity="1" />
-          <End Type="SelfEvaluation.Level" Role="Level" Multiplicity="*" />
+          <End Type="SelfEvaluation.Criterion" Role="Criteria" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SelfEvaluation.Level" Role="Level" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="Criteria">
               <PropertyRef Name="Id" />

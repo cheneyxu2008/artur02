@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server Compact Edition
 -- --------------------------------------------------
--- Date Created: 11/13/2011 16:27:06
--- Generated from EDMX file: C:\Source\Art\PublicSite\PublicSite\PublicSite\Models\SelfEvaluation.edmx
+-- Date Created: 11/16/2011 16:12:19
+-- Generated from EDMX file: D:\Source\Art\PublicSite\PublicSite\PublicSite\Models\SelfEvaluation.edmx
 -- --------------------------------------------------
 
 
@@ -108,7 +108,7 @@ ADD CONSTRAINT [FK_CriteriaLevel]
     FOREIGN KEY ([CriteriaId])
     REFERENCES [Criteria]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CriteriaLevel'
 CREATE INDEX [IX_FK_CriteriaLevel]
