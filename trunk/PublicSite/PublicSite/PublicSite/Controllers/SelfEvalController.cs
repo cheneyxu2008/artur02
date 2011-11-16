@@ -8,7 +8,7 @@ namespace PublicSite.Controllers
     {
         //
         // GET: /SelfEval/
-        [OutputCache(Duration = 60)]
+        //[OutputCache(Duration = 60)]
         public ActionResult Index()
         {
             //using (var context = new SelfEvaluationContext())

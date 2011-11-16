@@ -22,6 +22,13 @@
 
 <h2>Index</h2>
 
+<h3>Load</h3>
+<form>
+    <label for="selections">Current:</label><input id="selections" type="text" readonly/>&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>Load:</label><input id="loadtxt" type="text"/><button id="loadbtn" type="button">Load</button>
+</form>
+
+<h3>Content</h3>
 <table id="selfevaltable">
     <thead>
         <tr>
@@ -81,7 +88,31 @@
     <tfoot></tfoot>
 </table>
 
-<script>
+<script type="text/javascript">
+    var selectedIds = {};
+    
+    function idToString(ids) {
+        return JSON.stringify(ids, null, 0);
+    }
+    
+    function selectByIds(ids, root) {
+        for (var prop in ids) {
+            if (ids.hasOwnProperty(prop)) {
+                $('td', root)
+                    .filter(function () {
+                        return $(this).data("criteria") === prop && $(this).data("level") === ids[prop];
+                    })
+                    .addClass("dark")
+                    .addClass("selected")
+                    .each(function () {
+                        $(this).parent().children().slice(0, ids[prop] + 2).addClass("dark");
+                    });
+                
+            }
+        }
+    }
+
+
     $(document).ready(function () {
         var oTable = $('#selfevaltable')
             .dataTable({
@@ -95,14 +126,45 @@
             });
 
         $('td', oTable.fnGetNodes()).hover(
-                function () {
-                    //$(this).addClass("dark");
-                    var level = $(this).data('level');
-                    $(this).parent().children().slice(0, level + 2).addClass("dark");
-                    //$(this).addClass("dark");
-                },
-                function () {
+            function () {
+                var level = $(this).data('level');
+                $(this).parent().children().removeClass("dark");
+                $(this).parent().children().slice(0, level + 2).addClass("dark");
+            },
+            function () {
+                var selIndex;
+                if ($(this).parent().children().filter(function (index) {
+                    if ($(this).hasClass("selected")) {
+                        selIndex = index + 1;
+                    }
+                    return $(this).hasClass("selected");
+                }).length == 0) {
                     $(this).parent().children().removeClass("dark");
-                });
+                } else {
+                    $(this).parent().children().slice(0, selIndex).addClass("dark");
+                    $(this).parent().children().slice(selIndex).removeClass("dark");
+                }
+            });
+
+
+        $('td[data-criteria]', oTable.fnGetNodes()).each(function () {
+            selectedIds[$(this).data("criteria")] = false;
+        });
+
+        $('td', oTable.fnGetNodes()).click(function () {
+            selectedIds[$(this).data("criteria")] = $(this).data("level");
+
+            $(this).parent().children().removeClass("selected");
+            $(this).addClass("selected");
+
+            $('#selections').val(idToString(selectedIds));
+        });
+
+        $('#loadbtn').click(function () {
+            var value = $('#loadtxt').val();
+
+            selectedIds = JSON.parse(value);
+            selectByIds(selectedIds, oTable.fnGetNodes());
+        });
     });
 </script>
