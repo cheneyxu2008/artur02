@@ -2,7 +2,7 @@
 <ns1:criteria xmlns:ns1="http://tempuri.org/XMLSchema1.xsd">
 	<ns1:criterion>
 		<ns1:name>data structures</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>datastruct</ns1:identifier>
 		<ns1:category>Computer Science</ns1:category>
 		<ns1:level0>Doesn't know the difference between Array and LinkedList</ns1:level0>
 		<ns1:level1>Able to explain and use Arrays, LinkedLists, Dictionaries etc in practical programming tasks</ns1:level1>
@@ -12,7 +12,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>algorithms</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>algo</ns1:identifier>
 		<ns1:category>Computer Science</ns1:category>
 		<ns1:level0>Unable to find the average of numbers in an array (It's hard to believe but I've interviewed such candidates)</ns1:level0>
 		<ns1:level1>Basic sorting, searching and data structure traversal and retrieval algorithms</ns1:level1>
@@ -22,7 +22,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>systems programming</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>sysprog</ns1:identifier>
 		<ns1:category>Computer Science</ns1:category>
 		<ns1:level0>Doesn't know what a compiler, linker or interpreter is</ns1:level0>
 		<ns1:level1>Basic understanding of compilers, linker and interpreters. Understands what assembly code is and how things work at the hardware level. Some knowledge of virtual memory and paging.</ns1:level1>
@@ -32,7 +32,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>source code version control</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>ver</ns1:identifier>
 		<ns1:category>Software Engineering</ns1:category>
 		<ns1:level0>Folder backups by date</ns1:level0>
 		<ns1:level1>VSS and beginning CVS/SVN user</ns1:level1>
@@ -42,7 +42,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>build automation</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>build</ns1:identifier>
 		<ns1:category>Software Engineering</ns1:category>
 		<ns1:level0>Only knows how to build from IDE</ns1:level0>
 		<ns1:level1>Knows how to build the system from the command line</ns1:level1>
@@ -52,7 +52,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>automated testing</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>test</ns1:identifier>
 		<ns1:category>Software Engineering</ns1:category>
 		<ns1:level0>Thinks that all testing is the job of the tester</ns1:level0>
 		<ns1:level1>Has written automated unit tests and comes up with good unit test cases for the code that is being written</ns1:level1>
@@ -62,7 +62,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>problem decomposition</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>probdec</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Only straight line code with copy paste for reuse</ns1:level0>
 		<ns1:level1>Able to break up problem into multiple functions</ns1:level1>
@@ -72,7 +72,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>systems decomposition</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>sysdec</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Not able to think above the level of a single file/class</ns1:level0>
 		<ns1:level1>Able to break up problem space and design solution as long as it is within the same platform/technology</ns1:level1>
@@ -82,7 +82,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>communication</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>com</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Cannot express thoughts/ideas to peers. Poor spelling and grammar.</ns1:level0>
 		<ns1:level1>Peers can understand what is being said. Good spelling and grammar.</ns1:level1>
@@ -92,7 +92,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>code organization within a file</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>orgfile</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>no evidence of organization within a file</ns1:level0>
 		<ns1:level1>Methods are grouped logically or by accessibility</ns1:level1>
@@ -102,7 +102,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>code organization across files</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>ordxfile</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>No thought given to organizing code across files</ns1:level0>
 		<ns1:level1>Related files are grouped into a folder</ns1:level1>
@@ -112,7 +112,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>source tree organization</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>tree</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Everything in one folder</ns1:level0>
 		<ns1:level1>Basic separation of code into logical folders.</ns1:level1>
@@ -122,7 +122,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>code readability</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>read</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Mono-syllable names</ns1:level0>
 		<ns1:level1>Good names for files, variables classes, methods etc.</ns1:level1>
@@ -132,7 +132,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>defensive coding</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>def</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Doesn't understand the concept</ns1:level0>
 		<ns1:level1>Checks all arguments and asserts critical assumptions in code</ns1:level1>
@@ -142,7 +142,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>error handling</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>err</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Only codes the happy case</ns1:level0>
 		<ns1:level1>Basic error handling around code that can throw exceptions/generate errors</ns1:level1>
@@ -152,7 +152,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>IDE</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>ide</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Mostly uses IDE for text editing</ns1:level0>
 		<ns1:level1>Knows their way around the interface, able to effectively use the IDE using menus.</ns1:level1>
@@ -162,7 +162,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>API</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>api</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Needs to look up the documentation frequently</ns1:level0>
 		<ns1:level1>Has the most frequently used APIs in memory</ns1:level1>
@@ -172,7 +172,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>frameworks</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>fw</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Has not used any framework outside of the core platform</ns1:level0>
 		<ns1:level1>Has heard about but not used the popular frameworks available for the platform.</ns1:level1>
@@ -182,7 +182,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>requirements</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>req</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Takes the given requirements and codes to spec</ns1:level0>
 		<ns1:level1>Come up with questions regarding missed cases in the spec</ns1:level1>
@@ -192,7 +192,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>scripting</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>scr</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>No knowledge of scripting tools</ns1:level0>
 		<ns1:level1>Batch files/shell scripts</ns1:level1>
@@ -202,7 +202,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>database</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>db</ns1:identifier>
 		<ns1:category>Programming</ns1:category>
 		<ns1:level0>Thinks that Excel is a database</ns1:level0>
 		<ns1:level1>Knows basic database concepts, normalization, ACID, transactions and can write simple selects</ns1:level1>
@@ -212,7 +212,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>languages with professional experience</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>lang</ns1:identifier>
 		<ns1:category>Experience</ns1:category>
 		<ns1:level0>Imperative or Object Oriented</ns1:level0>
 		<ns1:level1>Imperative, Object-Oriented and declarative (SQL), added bonus if they understand static vs dynamic typing, weak vs strong typing and static inferred types</ns1:level1>
@@ -222,7 +222,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>platforms with professional experience</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>plat</ns1:identifier>
 		<ns1:category>Experience</ns1:category>
 		<ns1:level0>1</ns1:level0>
 		<ns1:level1>2-3</ns1:level1>
@@ -232,7 +232,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>years of professional experience</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>yrs</ns1:identifier>
 		<ns1:category>Experience</ns1:category>
 		<ns1:level0>1</ns1:level0>
 		<ns1:level1>2-5</ns1:level1>
@@ -242,7 +242,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>domain knowledge</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>dom</ns1:identifier>
 		<ns1:category>Experience</ns1:category>
 		<ns1:level0>No knowledge of the domain</ns1:level0>
 		<ns1:level1>Has worked on at least one product in the domain.</ns1:level1>
@@ -252,7 +252,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>tool knowledge</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>tool</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Limited to primary IDE (VS.Net, Eclipse etc.)</ns1:level0>
 		<ns1:level1>Knows about some alternatives to popular and standard tools.</ns1:level1>
@@ -262,7 +262,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>languages exposed to</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>langexp</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Imperative or Object Oriented</ns1:level0>
 		<ns1:level1>Imperative, Object-Oriented and declarative (SQL), added bonus if they understand static vs dynamic typing, weak vs strong typing and static inferred types</ns1:level1>
@@ -272,7 +272,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>codebase knowledge</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>cbaseexp</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Has never looked at the codebase</ns1:level0>
 		<ns1:level1>Basic knowledge of the code layout and how to build the system</ns1:level1>
@@ -282,7 +282,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>knowledge of upcoming technologies</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>upcom</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Has not heard of the upcoming technologies</ns1:level0>
 		<ns1:level1>Has heard of upcoming technologies in the field</ns1:level1>
@@ -292,7 +292,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>platform internals</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>platint</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Zero knowledge of platform internals</ns1:level0>
 		<ns1:level1>Has basic knowledge of how the platform works internally</ns1:level1>
@@ -302,7 +302,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>books</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>book</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Unleashed series, 21 days series, 24 hour series, dummies series...</ns1:level0>
 		<ns1:level1>Code Complete, Don't Make me Think, Mastering Regular Expressions</ns1:level1>
@@ -312,7 +312,7 @@
 	</ns1:criterion>
 	<ns1:criterion>
 		<ns1:name>blogs</ns1:name>
-		<ns1:identifier/>
+		<ns1:identifier>blog</ns1:identifier>
 		<ns1:category>Knowledge</ns1:category>
 		<ns1:level0>Has heard of them but never got the time.</ns1:level0>
 		<ns1:level1>Reads tech/programming/software engineering blogs and listens to podcasts regularly.</ns1:level1>
