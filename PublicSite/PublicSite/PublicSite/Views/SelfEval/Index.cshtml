@@ -31,6 +31,8 @@
 </div>
 
 <h3>Content</h3>
+Avarage: <span id="avarage">0</span>
+
 <table id="selfevaltable">
     <thead>
         <tr>
@@ -92,6 +94,7 @@
 
 <script type="text/javascript">
     var selectedIds = {};
+    var avarage = 0;
     
     function idToString(ids) {
         return JSON.stringify(ids, null, 0);
@@ -114,6 +117,19 @@
         }
     }
 
+    function updateAvg(ids) {
+        var count = 0;
+        var sum = 0;
+        for (var prop in ids) {
+            if (ids.hasOwnProperty(prop) && ids[prop] != false) {
+                count++;
+                sum += ids[prop];
+            }
+        }
+
+        avarage = sum / count;
+        $('#avarage').text(avarage);
+    }
 
     $(document).ready(function () {
         var oTable = $('#selfevaltable')
@@ -162,6 +178,7 @@
             $(this).addClass("selected");
 
             $('#selections').val(idToString(selectedIds));
+            updateAvg(selectedIds);
         });
 
         $('#loadbtn').click(function () {
@@ -169,6 +186,8 @@
 
             selectedIds = JSON.parse(value);
             selectByIds(selectedIds, oTable.fnGetNodes());
+
+            updateAvg(selectedIds);
         });
     });
 </script>
