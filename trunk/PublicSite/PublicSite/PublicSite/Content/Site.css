@@ -323,3 +323,27 @@ div#title {
     width: 6em;
 }
 
+
+
+
+
+/* Styles for Self Evaluation
+---------------------------------------------------------------*/
+
+.group {
+    font-weight: bold;
+    font-size: x-large;
+    color: dimgray;
+}
+
+/*
+.expanded-group {
+	background: url("minus.jpg") no-repeat scroll left center transparent;
+	padding-left: 15px !important
+}
+
+.collapsed-group {
+	background: url("plus.jpg") no-repeat scroll left center transparent;
+	padding-left: 15px !important
+}
+*/

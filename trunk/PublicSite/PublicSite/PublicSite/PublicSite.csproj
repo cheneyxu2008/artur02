@@ -168,6 +168,8 @@
     <Content Include="Content\DataTables-1.8.2\media\images\sort_both.png" />
     <Content Include="Content\DataTables-1.8.2\media\images\sort_desc.png" />
     <Content Include="Content\DataTables-1.8.2\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\minus.jpg" />
+    <Content Include="Content\plus.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
